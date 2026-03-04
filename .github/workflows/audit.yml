@@ -1,0 +1,32 @@
+# .github/workflows/audit.yml
+# Runs on every PR to validate formula changes before merge.
+# Set this as a required status check in branch protection settings.
+
+# The --new flag on brew audit applies stricter rules that Homebrew recommends for new formulae.
+# We can drop it later once the formula is established, but it's good to keep for now.
+
+name: Audit formula
+
+on:
+  pull_request:
+    paths:
+      - 'Formula/**'
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout tap
+        uses: actions/checkout@v4
+
+      - name: Audit formula
+        run: brew audit --strict --new bitloops/tap/bitloops
+
+      - name: Install formula
+        run: brew install bitloops/tap/bitloops
+
+      - name: Test formula
+        run: brew test bitloops/tap/bitloops
+
+      - name: Verify version output
+        run: bitloops --version

@@ -1,0 +1,36 @@
+class Bitloops < Formula
+  desc "The bitloops CLI"
+  homepage "https://github.com/bitloops/bitloops"
+  version "0.0.1"
+  license "Apache-2.0"
+
+  on_macos do
+    on_arm do
+      url "https://github.com/bitloops/bitloops/releases/download/v#{version}/bitloops-aarch64-apple-darwin.tar.gz"
+      sha256 "{{SHA256_DARWIN_ARM}}"
+    end
+    on_intel do
+      url "https://github.com/bitloops/bitloops/releases/download/v#{version}/bitloops-x86_64-apple-darwin.tar.gz"
+      sha256 "{{SHA256_DARWIN_INTEL}}"
+    end
+  end
+
+  on_linux do
+    on_arm do
+      url "https://github.com/bitloops/bitloops/releases/download/v#{version}/bitloops-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "{{SHA256_LINUX_ARM}}"
+    end
+    on_intel do
+      url "https://github.com/bitloops/bitloops/releases/download/v#{version}/bitloops-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "{{SHA256_LINUX_X86}}"
+    end
+  end
+
+  def install
+    bin.install "bitloops"
+  end
+
+  test do
+    system "#{bin}/bitloops", "--version"
+  end
+end

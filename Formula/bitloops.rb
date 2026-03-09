@@ -1,5 +1,5 @@
 class Bitloops < Formula
-  desc "Bitloops CLI"
+  desc "Track AI coding sessions and link them to Git commits locally"
   homepage "https://github.com/bitloops/bitloops"
   license "Apache-2.0"
 

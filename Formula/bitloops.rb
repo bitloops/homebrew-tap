@@ -1,7 +1,7 @@
 class Bitloops < Formula
   desc "The bitloops CLI"
   homepage "https://github.com/bitloops/bitloops"
-  version "0.0.1"
+  version "0.0.9"
   license "Apache-2.0"
 
   on_macos do

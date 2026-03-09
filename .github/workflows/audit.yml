@@ -19,14 +19,17 @@ jobs:
       - name: Checkout tap
         uses: actions/checkout@v4
 
+      - name: Tap local repository
+        run: brew tap bitloops/tap "$GITHUB_WORKSPACE"
+
       - name: Audit formula
-        run: brew audit --strict --new ./Formula/bitloops.rb
+        run: brew audit --strict --new bitloops/tap/bitloops
 
       - name: Install formula
-        run: brew install --build-from-source ./Formula/bitloops.rb
+        run: brew install bitloops/tap/bitloops
 
       - name: Test formula
-        run: brew test bitloops
+        run: brew test bitloops/tap/bitloops
 
       - name: Verify version output
         run: bitloops --version

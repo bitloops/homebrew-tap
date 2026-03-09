@@ -1,7 +1,6 @@
 class Bitloops < Formula
-  desc "The bitloops CLI"
+  desc "Track AI coding sessions and link them to Git commits locally"
   homepage "https://github.com/bitloops/bitloops"
-  version "{{VERSION}}"
   license "Apache-2.0"
 
   on_macos do
@@ -31,6 +30,6 @@ class Bitloops < Formula
   end
 
   test do
-    system "#{bin}/bitloops", "--version"
+    system bin/"bitloops", "--version"
   end
 end

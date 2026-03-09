@@ -19,6 +19,9 @@ jobs:
       - name: Checkout tap
         uses: actions/checkout@v4
 
+      - name: Tap local repository
+        run: brew tap bitloops/tap "$GITHUB_WORKSPACE"
+
       - name: Audit formula
         run: brew audit --strict --new bitloops/tap/bitloops
 

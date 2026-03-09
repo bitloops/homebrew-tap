@@ -20,13 +20,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Audit formula
-        run: brew audit --strict --new bitloops/tap/bitloops
+        run: brew audit --strict --new ./Formula/bitloops.rb
 
       - name: Install formula
-        run: brew install bitloops/tap/bitloops
+        run: brew install --build-from-source ./Formula/bitloops.rb
 
       - name: Test formula
-        run: brew test bitloops/tap/bitloops
+        run: brew test bitloops
 
       - name: Verify version output
         run: bitloops --version

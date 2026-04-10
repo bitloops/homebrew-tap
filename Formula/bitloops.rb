@@ -5,23 +5,23 @@ class Bitloops < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/bitloops/bitloops/releases/download/v0.0.10/bitloops-aarch64-apple-darwin.tar.gz"
-      sha256 "b6fe6e240e3ef66432a3078ea1dfd4847568e1daac6b74712f2fd87937efc42a"
+      url "https://github.com/bitloops/bitloops/releases/download/v0.0.13/bitloops-aarch64-apple-darwin.tar.gz"
+      sha256 "4e4cc8ccdc305dcdb4b8dfc57a7ed2cfb0fef1a01d46a23f5890d81f3d058c83"
     end
     on_intel do
-      url "https://github.com/bitloops/bitloops/releases/download/v0.0.10/bitloops-x86_64-apple-darwin.tar.gz"
-      sha256 "cfbfc64b5b4388790ad6638a800638b7e856654882d4fa805a90b3001bb50d86"
+      url "https://github.com/bitloops/bitloops/releases/download/v0.0.13/bitloops-x86_64-apple-darwin.tar.gz"
+      sha256 "9839d17d782edf58fed2b1832dfe860e5e5fc1df53914e90c8c7676307fe831f"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/bitloops/bitloops/releases/download/v0.0.10/bitloops-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "4618458c9122291787ddd3340549f286a9ebdebe0f71ec6a03aa643ba987e809"
+      url "https://github.com/bitloops/bitloops/releases/download/v0.0.13/bitloops-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "f3edf026d90693795fda545fa808022e436f64694398084f55471765db52df2f"
     end
     on_intel do
-      url "https://github.com/bitloops/bitloops/releases/download/v0.0.10/bitloops-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "f80f24ef2cf4dab134ac2172142a0cc941223bd57223283d252732660fea5102"
+      url "https://github.com/bitloops/bitloops/releases/download/v0.0.13/bitloops-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "68665b9c5659de06881713da456013e1119e6bcacca30112a2a6beacbc807677"
     end
   end
 
